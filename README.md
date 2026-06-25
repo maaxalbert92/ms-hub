@@ -1,10 +1,13 @@
 # MA Operations Hub
 
-Central operacional responsiva para acesso rápido aos sistemas usados por Max Albert.
+Central operacional de links e sistemas de Max Albert.
 
 ## Versão 1.0
-- Links operacionais
-- Busca instantânea
-- Categorias
+
+- PWA instalável no iPhone/Android
+- Tema escuro responsivo
+- Pesquisa instantânea
 - Favoritos
-- PWA para uso no celular
+- Categorias operacionais
+
+Publicado via GitHub Pages.
