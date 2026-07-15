@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ms-hub-v2.0.3';
+const CACHE_NAME = 'ms-hub-v2.0.0';
 
 const APP_ASSETS = [
   './',
