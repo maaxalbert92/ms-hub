@@ -130,4 +130,52 @@ if ('serviceWorker' in navigator) {
       .register('./service-worker.js')
       .catch(error => console.error('Falha ao registrar o Service Worker:', error));
   });
+
+  function updateClocks(){
+
+    const now = new Date();
+
+    const optionsTime = {
+        hour:'2-digit',
+        minute:'2-digit',
+        second:'2-digit',
+        hour12:false
+    };
+
+    const optionsDate = {
+        weekday:'short',
+        day:'2-digit',
+        month:'2-digit',
+        year:'numeric'
+    };
+
+    document.getElementById('clockBrazil').textContent =
+        now.toLocaleTimeString('pt-BR',{
+            ...optionsTime,
+            timeZone:'America/Maceio'
+        });
+
+    document.getElementById('dateBrazil').textContent =
+        now.toLocaleDateString('pt-BR',{
+            ...optionsDate,
+            timeZone:'America/Maceio'
+        });
+
+    document.getElementById('clockMadrid').textContent =
+        now.toLocaleTimeString('pt-BR',{
+            ...optionsTime,
+            timeZone:'Europe/Madrid'
+        });
+
+    document.getElementById('dateMadrid').textContent =
+        now.toLocaleDateString('pt-BR',{
+            ...optionsDate,
+            timeZone:'Europe/Madrid'
+        });
+
+}
+
+updateClocks();
+
+setInterval(updateClocks,1000);
 }
