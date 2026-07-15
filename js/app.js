@@ -130,107 +130,64 @@ if ('serviceWorker' in navigator) {
       .register('./service-worker.js')
       .catch(error => console.error('Falha ao registrar o Service Worker:', error));
   });
-function updateClocks() {
-  const now = new Date();
 
-  const timeOptions = {
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: false
-  };
-
-  const dateOptions = {
-    weekday: 'long',
-    day: '2-digit',
-    month: 'long',
-    year: 'numeric'
-  };
-
-  document.getElementById('clockBrazil').textContent =
-    now.toLocaleTimeString('pt-BR', {
-      ...timeOptions,
-      timeZone: 'America/Maceio'
-    });
-
-  document.getElementById('dateBrazil').textContent =
-    now.toLocaleDateString('pt-BR', {
-      ...dateOptions,
-      timeZone: 'America/Maceio'
-    });
-
-  document.getElementById('clockMadrid').textContent =
-    now.toLocaleTimeString('pt-BR', {
-      ...timeOptions,
-      timeZone: 'Europe/Madrid'
-    });
-
-  document.getElementById('dateMadrid').textContent =
-    now.toLocaleDateString('pt-BR', {
-      ...dateOptions,
-      timeZone: 'Europe/Madrid'
-    });
-}
-
-const weatherDescriptions = {
-  0: ['Céu limpo', '☀️'],
-  1: ['Predominantemente limpo', '🌤️'],
-  2: ['Parcialmente nublado', '⛅'],
-  3: ['Nublado', '☁️'],
-  45: ['Nevoeiro', '🌫️'],
-  48: ['Nevoeiro com geada', '🌫️'],
-  51: ['Garoa leve', '🌦️'],
-  53: ['Garoa moderada', '🌦️'],
-  55: ['Garoa intensa', '🌧️'],
-  61: ['Chuva leve', '🌦️'],
-  63: ['Chuva moderada', '🌧️'],
-  65: ['Chuva forte', '🌧️'],
-  80: ['Pancadas leves', '🌦️'],
-  81: ['Pancadas moderadas', '🌧️'],
-  82: ['Pancadas fortes', '⛈️'],
-  95: ['Trovoada', '⛈️'],
-  96: ['Trovoada com granizo', '⛈️'],
-  99: ['Trovoada forte com granizo', '⛈️']
-};
-
-async function updateWeather() {
-  const weatherTemperature =
-    document.getElementById('weatherTemperature');
-
-  const weatherDescription =
-    document.getElementById('weatherDescription');
-
-  const weatherDetails =
-    document.getElementById('weatherDetails');
-
-  const weatherIcon =
-    document.getElementById('weatherIcon');
+  async function updateWeather() {
+  const weatherTemperature = document.getElementById('weatherTemperature');
+  const weatherDescription = document.getElementById('weatherDescription');
+  const weatherDetails = document.getElementById('weatherDetails');
+  const weatherIcon = document.getElementById('weatherIcon');
 
   try {
-    const latitude = -10.648;
-    const longitude = -36.988;
-
     const url =
-      `https://api.open-meteo.com/v1/forecast` +
-      `?latitude=${latitude}` +
-      `&longitude=${longitude}` +
-      `&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m` +
-      `&temperature_unit=celsius` +
-      `&wind_speed_unit=kmh` +
-      `&timezone=America%2FMaceio`;
+      'https://api.open-meteo.com/v1/forecast' +
+      '?latitude=-10.688' +
+      '&longitude=-36.938' +
+      '&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m' +
+      '&temperature_unit=celsius' +
+      '&wind_speed_unit=kmh' +
+      '&timezone=America%2FMaceio';
 
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      method: 'GET',
+      cache: 'no-store'
+    });
 
     if (!response.ok) {
-      throw new Error(`Erro HTTP ${response.status}`);
+      throw new Error(`Erro HTTP: ${response.status}`);
     }
 
     const data = await response.json();
+
+    if (!data.current) {
+      throw new Error('A resposta não contém os dados meteorológicos atuais.');
+    }
+
     const current = data.current;
+
+    const weatherDescriptions = {
+      0: ['Céu limpo', '☀️'],
+      1: ['Predominantemente limpo', '🌤️'],
+      2: ['Parcialmente nublado', '⛅'],
+      3: ['Nublado', '☁️'],
+      45: ['Nevoeiro', '🌫️'],
+      48: ['Nevoeiro intenso', '🌫️'],
+      51: ['Garoa leve', '🌦️'],
+      53: ['Garoa moderada', '🌦️'],
+      55: ['Garoa intensa', '🌧️'],
+      61: ['Chuva leve', '🌦️'],
+      63: ['Chuva moderada', '🌧️'],
+      65: ['Chuva forte', '🌧️'],
+      80: ['Pancadas leves', '🌦️'],
+      81: ['Pancadas moderadas', '🌧️'],
+      82: ['Pancadas fortes', '⛈️'],
+      95: ['Trovoada', '⛈️'],
+      96: ['Trovoada com granizo', '⛈️'],
+      99: ['Trovoada forte', '⛈️']
+    };
 
     const condition =
       weatherDescriptions[current.weather_code] ||
-      ['Condição não identificada', '◌'];
+      ['Condição atual', '🌡️'];
 
     weatherTemperature.textContent =
       `${Math.round(current.temperature_2m)}°C`;
@@ -244,21 +201,12 @@ async function updateWeather() {
       ` · Vento ${Math.round(current.wind_speed_10m)} km/h`;
 
   } catch (error) {
-    console.error('Falha ao consultar o clima:', error);
+    console.error('Erro completo da consulta meteorológica:', error);
 
     weatherTemperature.textContent = '--°C';
     weatherIcon.textContent = '⚠️';
-    weatherDescription.textContent =
-      'Não foi possível atualizar o clima';
-
-    weatherDetails.textContent =
-      'Verifique a conexão com a internet';
+    weatherDescription.textContent = 'Falha ao atualizar o clima';
+    weatherDetails.textContent = error.message;
   }
 }
-
-updateClocks();
-setInterval(updateClocks, 1000);
-
-updateWeather();
-setInterval(updateWeather, 30 * 60 * 1000);
 }
