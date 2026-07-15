@@ -128,14 +128,66 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
       .register('./service-worker.js')
-      .catch(error => console.error('Falha ao registrar o Service Worker:', error));
+      .catch(error =>
+        console.error('Falha ao registrar o Service Worker:', error)
+      );
   });
+}
 
-  async function updateWeather() {
-  const weatherTemperature = document.getElementById('weatherTemperature');
-  const weatherDescription = document.getElementById('weatherDescription');
-  const weatherDetails = document.getElementById('weatherDetails');
-  const weatherIcon = document.getElementById('weatherIcon');
+function updateClocks() {
+  const now = new Date();
+
+  const timeOptions = {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  };
+
+  const dateOptions = {
+    weekday: 'long',
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric'
+  };
+
+  document.getElementById('clockBrazil').textContent =
+    now.toLocaleTimeString('pt-BR', {
+      ...timeOptions,
+      timeZone: 'America/Maceio'
+    });
+
+  document.getElementById('dateBrazil').textContent =
+    now.toLocaleDateString('pt-BR', {
+      ...dateOptions,
+      timeZone: 'America/Maceio'
+    });
+
+  document.getElementById('clockMadrid').textContent =
+    now.toLocaleTimeString('pt-BR', {
+      ...timeOptions,
+      timeZone: 'Europe/Madrid'
+    });
+
+  document.getElementById('dateMadrid').textContent =
+    now.toLocaleDateString('pt-BR', {
+      ...dateOptions,
+      timeZone: 'Europe/Madrid'
+    });
+}
+
+async function updateWeather() {
+  const weatherTemperature =
+    document.getElementById('weatherTemperature');
+
+  const weatherDescription =
+    document.getElementById('weatherDescription');
+
+  const weatherDetails =
+    document.getElementById('weatherDetails');
+
+  const weatherIcon =
+    document.getElementById('weatherIcon');
 
   try {
     const url =
@@ -159,7 +211,9 @@ if ('serviceWorker' in navigator) {
     const data = await response.json();
 
     if (!data.current) {
-      throw new Error('A resposta não contém os dados meteorológicos atuais.');
+      throw new Error(
+        'A resposta não contém os dados meteorológicos atuais.'
+      );
     }
 
     const current = data.current;
@@ -201,14 +255,23 @@ if ('serviceWorker' in navigator) {
       ` · Vento ${Math.round(current.wind_speed_10m)} km/h`;
 
   } catch (error) {
-    console.error('Erro completo da consulta meteorológica:', error);
+    console.error(
+      'Erro completo da consulta meteorológica:',
+      error
+    );
 
     weatherTemperature.textContent = '--°C';
     weatherIcon.textContent = '⚠️';
-    weatherDescription.textContent = 'Falha ao atualizar o clima';
+    weatherDescription.textContent =
+      'Falha ao atualizar o clima';
+
     weatherDetails.textContent = error.message;
   }
-    updateWeather();
-setInterval(updateWeather, 30 * 60 * 1000);
 }
+
+updateClocks();
+setInterval(updateClocks, 1000);
+
+updateWeather();
+setInterval(updateWeather, 30 * 60 * 1000);
 }
