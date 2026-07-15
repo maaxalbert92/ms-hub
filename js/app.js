@@ -208,5 +208,7 @@ if ('serviceWorker' in navigator) {
     weatherDescription.textContent = 'Falha ao atualizar o clima';
     weatherDetails.textContent = error.message;
   }
+    updateWeather();
+setInterval(updateWeather, 30 * 60 * 1000);
 }
 }
