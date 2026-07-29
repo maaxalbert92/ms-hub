@@ -29,7 +29,13 @@ const systems = [
 
   {name:'Gestão de Frotas', url:'https://carmoenergy.innovareti.com.br/login', category:'Corporativo', desc:'Sistema para gestão de frotas.', icon:'🚗', favorite:false, tags:['Frotas']},
 
-  {name:'Engenharia Elétrica', url:'https://fs-educ.sempreser.com.br/adfs/ls/', category:'Faculdade', desc:'Portal acadêmico da Engenharia Elétrica.', icon:'🎓', favorite:false, tags:['Faculdade']}
+  {name:'Engenharia Elétrica', url:'https://fs-educ.sempreser.com.br/adfs/ls/', category:'Faculdade', desc:'Portal acadêmico da Engenharia Elétrica.', icon:'🎓', favorite:false, tags:['Faculdade']},
+  
+  {name:'PFAC Portal', url:'https://pfac-portal.vercel.app/login',  category:'Operação',  desc:'Acesso ao portal operacional do PFAC.',  icon:'🧭',  favorite:true,  tags:['PFAC','Portal','Operação']},
+  
+  {name:'Cadastro de Estações - CIC',  url:'https://carmoenergy.sharepoint.com/sites/CIC-CentroIntegradodeControle/Lists/Cadastro%20de%20Estaes/AllItems.aspx',  category:'Documentos',  desc:'Cadastro das estações utilizado nos controles e aplicativos do CIC.',  icon:'🏭',  favorite:true,  tags:['Estações','CIC','SharePoint','Cadastro']},
+  
+  {name:'Power Apps',  url:'https://make.powerapps.com/environments/Default-ebba8479-b898-4081-a0de-dcaad02e0367/home',  category:'Desenvolvimento',  desc:'Criação, edição e gerenciamento dos aplicativos Power Apps.',  icon:'🧩',  favorite:true,  tags:['Power Apps','Microsoft','Aplicativos']}
 ];
 
 const favoritesGrid = document.getElementById('favoritesGrid');
