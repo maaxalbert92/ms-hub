@@ -1,44 +1,204 @@
 const systems = [
-  {name:'Sistema Carmo Energy', url:'https://sce.carmoenergy.com/', category:'Operação', desc:'Sistema corporativo operacional da Carmo Energy.', icon:'⚙️', favorite:true, tags:['CTO','SCE','PT','GM']},
+  {
+    name:'Sistema Carmo Energy',
+    url:'https://sce.carmoenergy.com/',
+    category:'Operação',
+    desc:'Sistema corporativo operacional da Carmo Energy.',
+    icon:'⚙️',
+    favorite:true,
+    tags:['CTO','SCE','PT','GM']
+  },
 
-  {name:'PI Vision', url:'https://pi.carmoenergy.com/PIVision/#/Displays/15749/Monitoramento-Geral---TEND%C3%8ANCIA', category:'Supervisório', desc:'Monitoramento geral e tendências operacionais.', icon:'📈', favorite:true, tags:['PI','Tendência']},
+  {
+    name:'PI Vision',
+    url:'https://pi.carmoenergy.com/PIVision/#/Displays/15749/Monitoramento-Geral---TEND%C3%8ANCIA',
+    category:'Supervisório',
+    desc:'Monitoramento geral e tendências operacionais.',
+    icon:'📈',
+    favorite:true,
+    tags:['PI','Tendência']
+  },
 
-  {name:'MAP - Monitoramento de Ativos de Petróleo', url:'https://carmoenergy.map.rntecnologia.com.br/map/dashboard/operacao', category:'Supervisório', desc:'Poços, SATs, tanques de campo e acompanhamento de ativos.', icon:'🛢️', favorite:true, tags:['Poços','SAT','TQ']},
+  {
+    name:'MAP - Monitoramento de Ativos de Petróleo',
+    url:'https://carmoenergy.map.rntecnologia.com.br/map/dashboard/operacao',
+    category:'Supervisório',
+    desc:'Poços, SATs, tanques de campo e acompanhamento de ativos.',
+    icon:'🛢️',
+    favorite:true,
+    tags:['Poços','SAT','TQ']
+  },
 
-  {name:'MedLogix', url:'http://10.254.200.80', category:'Medição Fiscal', desc:'Consulta e acompanhamento de dados de medição fiscal.', icon:'🧾', favorite:true, tags:['Fiscal','Medição']},
+  {
+    name:'MedLogix',
+    url:'http://10.254.200.80',
+    category:'Medição Fiscal',
+    desc:'Consulta e acompanhamento de dados de medição fiscal.',
+    icon:'🧾',
+    favorite:true,
+    tags:['Fiscal','Medição']
+  },
 
-  {name:'8.07 - Centro Integrado de Controle', url:'https://carmoenergy.sharepoint.com/:f:/s/dados/IgD_aXyDXtxCSbYEvHcaKgkZAZtoHSuDC_79k66S5iqn6ao', category:'Documentos', desc:'Pasta de documentos do Centro Integrado de Controle.', icon:'🏢', favorite:true, tags:['CIC','SharePoint']},
+  {
+    name:'8.07 - Centro Integrado de Controle',
+    url:'https://carmoenergy.sharepoint.com/:f:/s/dados/IgD_aXyDXtxCSbYEvHcaKgkZAZtoHSuDC_79k66S5iqn6ao',
+    category:'Documentos',
+    desc:'Pasta de documentos do Centro Integrado de Controle.',
+    icon:'🏢',
+    favorite:true,
+    tags:['CIC','SharePoint']
+  },
 
-  {name:'Carmópolis Dados', url:'https://carmoenergy.sharepoint.com/sites/dados/default.aspx', category:'Documentos', desc:'Portal de documentos e dados operacionais.', icon:'📁', favorite:false, tags:['SharePoint']},
+  {
+    name:'Carmópolis Dados',
+    url:'https://carmoenergy.sharepoint.com/sites/dados/default.aspx',
+    category:'Documentos',
+    desc:'Portal de documentos e dados operacionais.',
+    icon:'📁',
+    favorite:false,
+    tags:['SharePoint']
+  },
 
-  {name:'8Quali', url:'https://carmoenergy.8quali.com.br/home', category:'Documentos', desc:'Sistema de documentos e gestão da qualidade.', icon:'✅', favorite:false, tags:['Qualidade']},
+  {
+    name:'8Quali',
+    url:'https://carmoenergy.8quali.com.br/home',
+    category:'Documentos',
+    desc:'Sistema de documentos e gestão da qualidade.',
+    icon:'✅',
+    favorite:false,
+    tags:['Qualidade']
+  },
 
-  {name:'Portal Qualidade Assegurada', url:'https://carmoenergy.sharepoint.com/sites/QualidadeAssegurada', category:'Documentos', desc:'SharePoint da Qualidade Assegurada.', icon:'🗂️', favorite:false, tags:['Qualidade','SharePoint']},
+  {
+    name:'Portal Qualidade Assegurada',
+    url:'https://carmoenergy.sharepoint.com/sites/QualidadeAssegurada',
+    category:'Documentos',
+    desc:'SharePoint da Qualidade Assegurada.',
+    icon:'🗂️',
+    favorite:false,
+    tags:['Qualidade','SharePoint']
+  },
 
-  {name:'Resultado de Amostras', url:'https://labsoft-identitycenter-sts-prd.azurewebsites.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DmyLIMSweb_JQuery%26redirect_uri%3Dhttps%253A%252F%252Fcarmoenergy.mylimsweb.cloud%252Fcallback%252Findex%26response_type%3Dcode%26scope%3Dopenid%2520myLIMSweb_API_Create%2520myLIMSweb_API_Read%2520myLIMSweb_API_Update%2520myLIMSweb_API_Delete%2520DataViewer_API_Create%2520DataViewer_API_Read%2520DataViewer_API_Update%2520DataViewer_API_Delete%2520DataFactory_API_Create%2520DataFactory_API_Read%2520DataFactory_API_Update%2520DataFactory_API_Delete%26state%3D4941dd480c3d4f5bb2d4aa874beca18f%26code_challenge%3DZ38NlAo30qKmtF8r_--L2H07VKiWxRMJV79WQFxKA4c%26code_challenge_method%3DS256%26response_mode%3Dquery%26requesterClient%3Dcarmoenergy', category:'Laboratório', desc:'Consulta de resultados laboratoriais de amostras.', icon:'🧪', favorite:false, tags:['LIMS','Amostras']},
+  {
+    name:'Resultado de Amostras',
+    url:'https://labsoft-identitycenter-sts-prd.azurewebsites.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DmyLIMSweb_JQuery%26redirect_uri%3Dhttps%253A%252F%252Fcarmoenergy.mylimsweb.cloud%252Fcallback%252Findex%26response_type%3Dcode%26scope%3Dopenid%2520myLIMSweb_API_Create%2520myLIMSweb_API_Read%2520myLIMSweb_API_Update%2520myLIMSweb_API_Delete%2520DataViewer_API_Create%2520DataViewer_API_Read%2520DataViewer_API_Update%2520DataViewer_API_Delete%2520DataFactory_API_Create%2520DataFactory_API_Read%2520DataFactory_API_Update%2520DataFactory_API_Delete%26state%3D4941dd480c3d4f5bb2d4aa874beca18f%26code_challenge%3DZ38NlAo30qKmtF8r_--L2H07VKiWxRMJV79WQFxKA4c%26code_challenge_method%3DS256%26response_mode%3Dquery%26requesterClient%3Dcarmoenergy',
+    category:'Laboratório',
+    desc:'Consulta de resultados laboratoriais de amostras.',
+    icon:'🧪',
+    favorite:false,
+    tags:['LIMS','Amostras']
+  },
 
-  {name:'GLPI - Chamados HelpDesk', url:'https://servicedesk.carmoenergy.com/Helpdesk', category:'TI', desc:'Abertura e acompanhamento de chamados de TI.', icon:'🛠️', favorite:false, tags:['HelpDesk','TI']},
+  {
+    name:'GLPI - Chamados HelpDesk',
+    url:'https://servicedesk.carmoenergy.com/Helpdesk',
+    category:'TI',
+    desc:'Abertura e acompanhamento de chamados de TI.',
+    icon:'🛠️',
+    favorite:false,
+    tags:['HelpDesk','TI']
+  },
 
-  {name:'Safety Inspeciones', url:'https://safetycobrais.com/login', category:'Grupo Cobra', desc:'Sistema de inspeções e gestão de segurança do Grupo Cobra.', icon:'🦺', favorite:true, tags:['Inspeção','Cobra','Safety']},
+  {
+    name:'Safety Inspeciones',
+    url:'https://safetycobrais.com/login',
+    category:'Grupo Cobra',
+    desc:'Sistema de inspeções e gestão de segurança do Grupo Cobra.',
+    icon:'🦺',
+    favorite:false,
+    tags:['Inspeção','Cobra','Safety']
+  },
 
-  {name:'Orchestra', url:'https://carmoenergy.zeev.it/my/tasks', category:'Corporativo', desc:'Fluxos de trabalho e tarefas pendentes.', icon:'📋', favorite:true, tags:['Workflow','Zeev','Tarefas']},
+  {
+    name:'Orchestra',
+    url:'https://carmoenergy.zeev.it/my/tasks',
+    category:'Corporativo',
+    desc:'Fluxos de trabalho e tarefas pendentes.',
+    icon:'📋',
+    favorite:false,
+    tags:['Workflow','Zeev','Tarefas']
+  },
 
-  {name:'My Ahgora - TOTVS', url:'https://app.ahgora.com.br/externo/', category:'Corporativo', desc:'Registro e consulta de ponto.', icon:'⏱️', favorite:false, tags:['Ponto','TOTVS']},
+  {
+    name:'My Ahgora - TOTVS',
+    url:'https://app.ahgora.com.br/externo/',
+    category:'Corporativo',
+    desc:'Registro e consulta de ponto.',
+    icon:'⏱️',
+    favorite:false,
+    tags:['Ponto','TOTVS']
+  },
 
-  {name:'Meu RH - TOTVS', url:'https://meurh.carmoenergy.com/web/app/RH/PortalMeuRH/#/login', category:'Corporativo', desc:'FOPAG, férias e serviços de RH.', icon:'👤', favorite:false, tags:['RH','Férias']},
+  {
+    name:'Meu RH - TOTVS',
+    url:'https://meurh.carmoenergy.com/web/app/RH/PortalMeuRH/#/login',
+    category:'Corporativo',
+    desc:'FOPAG, férias e serviços de RH.',
+    icon:'👤',
+    favorite:false,
+    tags:['RH','Férias']
+  },
 
-  {name:'Gestão de Frotas', url:'https://carmoenergy.innovareti.com.br/login', category:'Corporativo', desc:'Sistema para gestão de frotas.', icon:'🚗', favorite:false, tags:['Frotas']},
+  {
+    name:'Gestão de Frotas',
+    url:'https://carmoenergy.innovareti.com.br/login',
+    category:'Corporativo',
+    desc:'Sistema para gestão de frotas.',
+    icon:'🚗',
+    favorite:false,
+    tags:['Frotas']
+  },
 
-  {name:'Engenharia Elétrica', url:'https://fs-educ.sempreser.com.br/adfs/ls/', category:'Faculdade', desc:'Portal acadêmico da Engenharia Elétrica.', icon:'🎓', favorite:false, tags:['Faculdade']},
-  
-  {name:'ADTEC - Portal PFAC', url:'https://pfac-portal.vercel.app/login',  category:'Operação',  desc:'Acesso ao portal operacional do PFAC.',  icon:'🧭',  favorite:true,  tags:['PFAC','Portal','Operação']},
-  
-  {name:'CIC - SharePoint',  url:'https://carmoenergy.sharepoint.com/sites/CIC-CentroIntegradodeControle',  category:'Documentos',  desc:'Portal CIC no SharePoint',  icon:'🏭',  favorite:true,  tags:['CIC','SharePoint']},
-  
-  {name:'Power Apps',  url:'https://make.powerapps.com/environments/Default-ebba8479-b898-4081-a0de-dcaad02e0367/home',  category:'Desenvolvimento',  desc:'Criação, edição e gerenciamento dos aplicativos Power Apps.',  icon:'🧩',  favorite:true,  tags:['Power Apps','Microsoft','Aplicativos']},
+  {
+    name:'Engenharia Elétrica',
+    url:'https://fs-educ.sempreser.com.br/adfs/ls/',
+    category:'Faculdade',
+    desc:'Portal acadêmico da Engenharia Elétrica.',
+    icon:'🎓',
+    favorite:false,
+    tags:['Faculdade']
+  },
 
-  {name:'Planilhas Operacionais', url:'<a href="https://carmoenergy.sharepoint.com/sites/PlanilhasOperacionais/Documentos%20Compartilhados/Forms/AllItems.aspx" target="_blank" rel="noopener noreferrer" title="Planilhas Operacionais" class="fai-ChatInputEntity__text ___6erqso0 fyind8e f1tx3yz7 f1deo86v f1eh06m1 f1iescvh">https://carmoenergy.sharepoint.com/sites/PlanilhasOperacionais/Documentos%20Compartilhados/Forms/AllItems.aspx</a>', category:'Operação', desc:'Repositório de planilhas operacionais para controle de produção, movimentação por carro-vácuo e carretas, controle de lacres e demais controles operacionais.', icon:'📊', favorite:true, tags:['Planilhas','Operação','Produção','Carro Vácuo','Carretas','Lacres']};
-],
+  {
+    name:'ADTEC - Portal PFAC',
+    url:'https://pfac-portal.vercel.app/login',
+    category:'Operação',
+    desc:'Acesso ao portal operacional do PFAC.',
+    icon:'🧭',
+    favorite:true,
+    tags:['PFAC','Portal','Operação']
+  },
+
+  {
+    name:'CIC - SharePoint',
+    url:'https://carmoenergy.sharepoint.com/sites/CIC-CentroIntegradodeControle',
+    category:'Documentos',
+    desc:'Portal do Centro Integrado de Controle no SharePoint.',
+    icon:'🏭',
+    favorite:true,
+    tags:['CIC','SharePoint']
+  },
+
+  {
+    name:'Power Apps',
+    url:'https://make.powerapps.com/environments/Default-ebba8479-b898-4081-a0de-dcaad02e0367/home',
+    category:'Desenvolvimento',
+    desc:'Criação, edição e gerenciamento dos aplicativos Power Apps.',
+    icon:'🧩',
+    favorite:false,
+    tags:['Power Apps','Microsoft','Aplicativos']
+  },
+
+  {
+    name:'Planilhas Operacionais',
+    url:'https://carmoenergy.sharepoint.com/sites/PlanilhasOperacionais/Documentos%20Compartilhados/Forms/AllItems.aspx',
+    category:'Operação',
+    desc:'Repositório de planilhas operacionais para controle de produção, movimentação por carro-vácuo e carretas, controle de lacres e demais controles operacionais.',
+    icon:'📊',
+    favorite:true,
+    tags:['Planilhas','Operação','Produção','Carro Vácuo','Carretas','Lacres']
+  }
+];
   
 const favoritesGrid = document.getElementById('favoritesGrid');
 const categoryGroups = document.getElementById('categoryGroups');
