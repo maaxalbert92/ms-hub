@@ -35,9 +35,11 @@ const systems = [
   
   {name:'CIC - SharePoint',  url:'https://carmoenergy.sharepoint.com/sites/CIC-CentroIntegradodeControle',  category:'Documentos',  desc:'Portal CIC no SharePoint',  icon:'🏭',  favorite:true,  tags:['CIC','SharePoint']},
   
-  {name:'Power Apps',  url:'https://make.powerapps.com/environments/Default-ebba8479-b898-4081-a0de-dcaad02e0367/home',  category:'Desenvolvimento',  desc:'Criação, edição e gerenciamento dos aplicativos Power Apps.',  icon:'🧩',  favorite:true,  tags:['Power Apps','Microsoft','Aplicativos']}
-];
+  {name:'Power Apps',  url:'https://make.powerapps.com/environments/Default-ebba8479-b898-4081-a0de-dcaad02e0367/home',  category:'Desenvolvimento',  desc:'Criação, edição e gerenciamento dos aplicativos Power Apps.',  icon:'🧩',  favorite:true,  tags:['Power Apps','Microsoft','Aplicativos']},
 
+  {name:'Planilhas Operacionais', url:'<a href="https://carmoenergy.sharepoint.com/sites/PlanilhasOperacionais/Documentos%20Compartilhados/Forms/AllItems.aspx" target="_blank" rel="noopener noreferrer" title="Planilhas Operacionais" class="fai-ChatInputEntity__text ___6erqso0 fyind8e f1tx3yz7 f1deo86v f1eh06m1 f1iescvh">https://carmoenergy.sharepoint.com/sites/PlanilhasOperacionais/Documentos%20Compartilhados/Forms/AllItems.aspx</a>', category:'Operação', desc:'Repositório de planilhas operacionais para controle de produção, movimentação por carro-vácuo e carretas, controle de lacres e demais controles operacionais.', icon:'📊', favorite:true, tags:['Planilhas','Operação','Produção','Carro Vácuo','Carretas','Lacres']};
+],
+  
 const favoritesGrid = document.getElementById('favoritesGrid');
 const categoryGroups = document.getElementById('categoryGroups');
 const searchInput = document.getElementById('searchInput');
