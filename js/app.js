@@ -1,7 +1,7 @@
 const systems = [
   {
     name:'Sistema Carmo Energy',
-    url:'https://sce.carmoenergy.com/',
+    url:'https://sce.carmoenergy.com',
     category:'Operação',
     desc:'Sistema corporativo operacional da Carmo Energy.',
     icon:'⚙️',
