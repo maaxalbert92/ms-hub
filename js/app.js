@@ -247,6 +247,16 @@ const systems = [
     favorite:false,
     tags:['SEPRO','PSP','Segurança de Processos','Power BI','Auditorias','Incidentes']
   },
+
+    {
+    name:'PFAC - Gás ECCP - Leituras de Operação',
+    url:'https://carmoenergy.sharepoint.com/sites/PFAC-OP.PLOGSCP/Registros%20De%20Operaes/Forms/AllItems.aspx?id=%2Fsites%2FPFAC%2DOP%2EPLOGSCP%2FRegistros%20De%20Operaes%2FInspe%C3%A7%C3%B5es%20D%C3%ADarias%2FLeituras%20De%20Opera%C3%A7%C3%A3o&viewid=431d562a%2D8a82%2D4753%2Dae97%2Dd522bab4c333',
+    category:'Documentos',
+    desc:'Registros operacionais e leituras de operação do Polo Gás (ECCP) no PFAC.',
+    icon:'📂',
+    favorite:false,
+    tags:['SharePoint','PFAC','Gás','ECCP','Leituras']
+  },
   
   {
     name:'Planilhas Operacionais',
