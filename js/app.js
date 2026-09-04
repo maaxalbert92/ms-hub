@@ -209,13 +209,23 @@ const systems = [
   },
 
     {
-    name:'RDI - Registro de Desvios e Incidente',
+    name:'RDI - Registro de Desvio e Incidente',
     url:'https://apps.powerapps.com/play/e/default-ebba8479-b898-4081-a0de-dcaad02e0367/a/3a826559-0da0-444f-ab3b-284531667e12?tenantId=ebba8479-b898-4081-a0de-dcaad02e0367',
     category:'Corporativo',
     desc:'Registro e acompanhamento de incidentes SAP.',
     icon:'🚨',
     favorite:false,
     tags:['SAP','Incidente','Power Apps', 'RDI']
+  },
+
+    {
+    name:'Ferramentas PDF - CE',
+    url:'https://pdf.carmoenergy.com/',
+    category:'TI',
+    desc:'Mesclar, dividir, comprimir, editar, assinar e organizar arquivos PDF.',
+    icon:'📄',
+    favorite:false,
+    tags:['PDF','Ferramentas','TI']
   },
   
   {
