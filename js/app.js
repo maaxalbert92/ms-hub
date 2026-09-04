@@ -189,12 +189,12 @@ const systems = [
     tags:['Power Apps','Microsoft','Aplicativos']
   },
   {
-    name:'BI - Estações (Produção e Avaliação)',
+    name:'Estações - Produção e Avaliação (Power BI)',
     url:'https://app.powerbi.com/groups/me/reports/42d0eafd-1364-462c-b361-34d9307e7437/059ceae10d6771985804?ctid=ebba8479-b898-4081-a0de-dcaad02e0367&experience=power-bi',
     category:'BI',
     desc:'Dashboard Power BI de produção e avaliação das estações.',
     icon:'📊',
-    favorite:true,
+    favorite:false,
     tags:['BI','Power BI','Produção','Avaliação']
   },
 
@@ -226,6 +226,26 @@ const systems = [
     icon:'📄',
     favorite:false,
     tags:['PDF','Ferramentas','TI']
+  },
+
+    {
+    name:'SEPRO - Ocorrências de Barreiras (Power BI)',
+    url:'https://app.powerbi.com/view?r=eyJrIjoiZmQ2ZmEyOGEtMzI5Mi00OTI5LWI5NzEtMzZlZWY5YmQwNmVmIiwidCI6ImViYmE4NDc5LWI4OTgtNDA4MS1hMGRlLWRjYWFkMDJlMDM2NyJ9',
+    category:'Supervisório',
+    desc:'Mapa de instalações e ocorrências de barreiras (SEPRO).',
+    icon:'🗺️',
+    favorite:false,
+    tags:['SEPRO','Barreiras','Power BI','Mapa']
+  },
+
+    {
+    name:'Painel de Segurança de Processos (Power BI)',
+    url:'https://app.powerbi.com/view?r=eyJrIjoiYWNhMDIxZjctZDJmMC00NmM0LWFlNzgtMTQwOTFlNjM3NjczIiwidCI6ImViYmE4NDc5LWI4OTgtNDA4MS1hMGRlLWRjYWFkMDJlMDM2NyJ9',
+    category:'Supervisório',
+    desc:'Auditorias, planos e reports, gestão de mudanças, barreiras, incidentes e emergências.',
+    icon:'🛡️',
+    favorite:false,
+    tags:['SEPRO','PSP','Segurança de Processos','Power BI','Auditorias','Incidentes']
   },
   
   {
