@@ -207,6 +207,16 @@ const systems = [
     favorite:false,
     tags:['Engenharia','Fluxograma','Documentos Técnicos']
   },
+
+    {
+    name:'Registro de Incidente SAP - Power Apps',
+    url:'https://apps.powerapps.com/play/e/default-ebba8479-b898-4081-a0de-dcaad02e0367/a/3a826559-0da0-444f-ab3b-284531667e12?tenantId=ebba8479-b898-4081-a0de-dcaad02e0367',
+    category:'Corporativo',
+    desc:'Registro e acompanhamento de incidentes SAP.',
+    icon:'🚨',
+    favorite:false,
+    tags:['SAP','Incidente','Power Apps']
+  },
   
   {
     name:'Planilhas Operacionais',
