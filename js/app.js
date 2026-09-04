@@ -215,7 +215,7 @@ const systems = [
     desc:'Registro e acompanhamento de incidentes SAP.',
     icon:'🚨',
     favorite:false,
-    tags:['SAP','Incidente','Power Apps']
+    tags:['SAP','Incidente','Power Apps', 'RDI']
   },
   
   {
