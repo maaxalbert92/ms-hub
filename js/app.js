@@ -188,7 +188,15 @@ const systems = [
     favorite:false,
     tags:['Power Apps','Microsoft','Aplicativos']
   },
-
+  {
+    name:'BI - Estações (Produção e Avaliação)',
+    url:'https://app.powerbi.com/groups/me/reports/42d0eafd-1364-462c-b361-34d9307e7437/059ceae10d6771985804?ctid=ebba8479-b898-4081-a0de-dcaad02e0367&experience=power-bi',
+    category:'BI',
+    desc:'Dashboard Power BI de produção e avaliação das estações.',
+    icon:'📊',
+    favorite:true,
+    tags:['BI','Power BI','Produção','Avaliação']
+  },
   {
     name:'Planilhas Operacionais',
     url:'https://carmoenergy.sharepoint.com/sites/PlanilhasOperacionais/Documentos%20Compartilhados/Forms/AllItems.aspx',
