@@ -197,6 +197,17 @@ const systems = [
     favorite:true,
     tags:['BI','Power BI','Produção','Avaliação']
   },
+
+    {
+    name:'GreenDocs - Documentos de Engenharia',
+    url:'https://carmoenergy.greendocs.net/app',
+    category:'Documentos',
+    desc:'Acesso a documentos de engenharia, fluxogramas de processo e demais documentação técnica.',
+    icon:'📐',
+    favorite:false,
+    tags:['Engenharia','Fluxograma','Documentos Técnicos']
+  },
+  
   {
     name:'Planilhas Operacionais',
     url:'https://carmoenergy.sharepoint.com/sites/PlanilhasOperacionais/Documentos%20Compartilhados/Forms/AllItems.aspx',
