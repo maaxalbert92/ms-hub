@@ -151,12 +151,12 @@ const systems = [
 
   {
     name:'Engenharia Elétrica',
-    url:'https://fs-educ.sempreser.com.br/adfs/ls/',
+    url:'https://fs-educ.sempreser.com.br/adfs/ls',
     category:'Faculdade',
     desc:'Portal acadêmico da Engenharia Elétrica.',
     icon:'🎓',
     favorite:false,
-    tags:['Faculdade']
+    tags:['Faculdade', 'SER Educacional', 'Uninassau Aracaju']
   },
 
   {
