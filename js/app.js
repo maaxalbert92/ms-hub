@@ -151,7 +151,7 @@ const systems = [
 
   {
     name:'Engenharia Elétrica',
-    url:'https://fs-educ.sempreser.com.br/adfs/ls',
+    url:'https://aluno.sereduc.com/',
     category:'Faculdade',
     desc:'Portal acadêmico da Engenharia Elétrica.',
     icon:'🎓',
