@@ -66,7 +66,7 @@ const systems = [
     desc:'Sistema de documentos e gestão da qualidade.',
     icon:'✅',
     favorite:false,
-    tags:['Qualidade']
+    tags:['Qualidade', 'Procedimentos']
   },
 
   {
