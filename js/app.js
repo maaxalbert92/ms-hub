@@ -100,13 +100,13 @@ const systems = [
   },
 
   {
-    name:'Safety Inspeciones',
+    name:'SafeIS Inspeciones',
     url:'https://safetycobrais.com/login',
     category:'Grupo Cobra',
     desc:'Sistema de inspeções e gestão de segurança do Grupo Cobra.',
     icon:'🦺',
     favorite:false,
-    tags:['Inspeção','Cobra','Safety']
+    tags:['Inspeção','Cobra','SafeIS','Segurança']
   },
 
   {
